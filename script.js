@@ -1,11 +1,16 @@
-// Inicialização da biblioteca AOS para animações
+// Inicializa o AOS
 AOS.init({
-  disable: false,     // Animações ativadas em todos os dispositivos
-  mirror: false,      // Não repetir a animação ao voltar a rolagem
-  once: true          // Animação ocorre apenas uma vez
+  disable: false,
+  mirror: false,
+  once: true
 });
 
-// Força a rolagem para o topo ao recarregar a página
-window.onbeforeunload = function () {
-  window.scrollTo(0, 0);
-};
+window.addEventListener('load', () => {
+  if (window.location.hash) {
+    history.replaceState(null, null, window.location.pathname);
+  }
+  // Pequeno delay para garantir que a página já carregou o conteúdo
+  setTimeout(() => {
+    window.scrollTo(0, 0);
+  }, 50);
+});
