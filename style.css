@@ -119,6 +119,25 @@ h2 {
   margin-bottom: 10px;
 }
 
+.btn-outline {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: 2px solid var(--cor-texto);
+  color: var(--cor-texto);
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background-color: transparent;
+}
+
+.btn-outline:hover {
+  background-color: var(--cor-primaria);
+  color: #ffffff;
+  transform: scale(1.03);
+}
+
 footer {
   position: relative;
   padding: 2rem 1rem;
