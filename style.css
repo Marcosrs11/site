@@ -101,7 +101,7 @@ h2 {
   font-size: 1.8rem;
   color: var(--cor-primaria);
   margin-bottom: 20px;
-  text-align: center;
+  text-align: left; /* alinhado à esquerda no desktop */
 }
 
 .limite-texto {
@@ -197,6 +197,7 @@ footer::before {
 
   h2 {
     font-size: 1.4rem;
+    text-align: center; /* centralizado no mobile */
   }
 
   .limite-texto {
@@ -225,3 +226,4 @@ footer::before {
     opacity: 1;
   }
 }
+
